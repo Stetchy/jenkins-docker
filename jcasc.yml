@@ -1,0 +1,44 @@
+jenkins:
+
+    numExecutors: 3
+    mode: EXCLUSIVE
+
+    updateCenter:
+        sites:
+            - id: "default"
+              url: "https://updates.jenkins-ci.org/update-center.actual.json"
+    
+    slaveAgentPort: 50000
+    agentProtocols:
+        - "JNLP4-connect"
+        - "Ping"
+    
+    crumbIssuer:
+        standard:
+            excludeClientIPFromCrumb: true
+    
+    remotingSecurity:
+        enabled: true
+    
+security:
+
+    globalJobDslSecurityConfiguration:
+        useScriptSecurity: false
+
+    apiToken:
+        creationOfLegacyTokenEnabled: false
+        tokenGenerationOnCreationEnabled: false
+        usageStatisticsEnabled: true
+
+    sSHD:
+        port: -1
+
+unclassified:
+    
+    location:
+        adminAddress: "Jenkins Admin <jenkins.admin@test.com>"
+        url: "127.0.0.1:8080"
+    
+    gitscm:
+        globalConfigEmail: "riain.condon4@mail.dcu.ie"
+        globalConfigName: "Riain Condon"

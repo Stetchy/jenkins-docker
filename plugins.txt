@@ -1,0 +1,17 @@
+job-dsl
+configuration-as-code
+git
+credentials
+role-strategy
+aws-credentials
+ec2
+embeddable-build-status
+greenballs
+pipeline-input-step
+ldap
+junit
+external-monitor-job
+matrix-project
+jdk-tool
+antisamy-markup-formatter
+windows-slaves

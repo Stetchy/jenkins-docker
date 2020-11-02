@@ -1,0 +1,13 @@
+version: "3.7"
+services:
+    master:
+        build:
+            context: .
+        image: riaincondon/jenkins
+        restart: "unless-stopped"
+        environment:
+            - CASC_JENKINS_CONFIG=/var/lib/jenkins/jcasc.yml
+        ports:
+            - "8080:8080"
+        volumes:
+            - ./jcasc.yaml:/var/lib/jcasc.yml
