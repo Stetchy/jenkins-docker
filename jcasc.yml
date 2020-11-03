@@ -42,3 +42,16 @@ unclassified:
     gitscm:
         globalConfigEmail: "riain.condon4@mail.dcu.ie"
         globalConfigName: "Riain Condon"
+
+jobs:
+    - script: >
+        pipelineJob('admin-seedjob'){
+            definition {
+                cpsScm {
+                    scm {
+                        git('')
+                        scriptPath('')
+                    }
+                }
+            }
+        }
